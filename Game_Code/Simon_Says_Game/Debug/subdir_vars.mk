@@ -9,26 +9,32 @@ CMD_SRCS += \
 ../tm4c123gh6pm.cmd 
 
 C_SRCS += \
+../MAIN_GAME_APP.c \
 ../main.c \
 ../tm4c123gh6pm_startup_ccs.c 
 
 C_DEPS += \
+./MAIN_GAME_APP.d \
 ./main.d \
 ./tm4c123gh6pm_startup_ccs.d 
 
 OBJS += \
+./MAIN_GAME_APP.obj \
 ./main.obj \
 ./tm4c123gh6pm_startup_ccs.obj 
 
 OBJS__QUOTED += \
+"MAIN_GAME_APP.obj" \
 "main.obj" \
 "tm4c123gh6pm_startup_ccs.obj" 
 
 C_DEPS__QUOTED += \
+"MAIN_GAME_APP.d" \
 "main.d" \
 "tm4c123gh6pm_startup_ccs.d" 
 
 C_SRCS__QUOTED += \
+"../MAIN_GAME_APP.c" \
 "../main.c" \
 "../tm4c123gh6pm_startup_ccs.c" 
 

@@ -1,2 +1,3 @@
-2024/09/16-21:38:14.789 1f0c Creating DB E:\Projects\Simon Says Game\Simon-Says-Game\Game_Code\.jxbrowser.userdata\Default\Sync Data\LevelDB since it was missing.
-2024/09/16-21:38:15.229 1f0c Reusing MANIFEST E:\Projects\Simon Says Game\Simon-Says-Game\Game_Code\.jxbrowser.userdata\Default\Sync Data\LevelDB/MANIFEST-000001
+2024/09/17-00:56:41.876 a38 Reusing MANIFEST E:\Projects\Simon Says Game\Simon-Says-Game\Game_Code\.jxbrowser.userdata\Default\Sync Data\LevelDB/MANIFEST-000001
+2024/09/17-00:56:41.885 a38 Recovering log #3
+2024/09/17-00:56:41.885 a38 Reusing old log E:\Projects\Simon Says Game\Simon-Says-Game\Game_Code\.jxbrowser.userdata\Default\Sync Data\LevelDB/000003.log 
