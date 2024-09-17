@@ -17,6 +17,8 @@ MAIN_GAME_APP.obj: C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/includ
 MAIN_GAME_APP.obj: C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 MAIN_GAME_APP.obj: ../std_types.h
 MAIN_GAME_APP.obj: ../tm4c123gh6pm.h
+MAIN_GAME_APP.obj: ../PORT.h
+MAIN_GAME_APP.obj: ../LEDs.h
 
 ../MAIN_GAME_APP.c:
 
@@ -51,4 +53,8 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 ../std_types.h:
 
 ../tm4c123gh6pm.h:
+
+../PORT.h:
+
+../LEDs.h:
 

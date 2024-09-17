@@ -14,6 +14,8 @@
 #include <string.h>
 #include "std_types.h"
 #include "tm4c123gh6pm.h"
+#include "PORT.h"
+#include "LEDs.h"
 
 #define CHAR_SET "RGBYPCW"                              //Used Letters for the Sequence
 #define CHAR_SET_SIZE (sizeof(CHAR_SET) - 1)            // Exclude the null terminator
