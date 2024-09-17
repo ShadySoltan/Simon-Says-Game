@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Tue Sep 17 19:34:23 2024
+>> Linked Tue Sep 17 19:37:46 2024
 
 OUTPUT FILE NAME:   <Simon_Says_Game.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 000004c5
