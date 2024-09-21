@@ -13,6 +13,7 @@ ORDERED_OBJS += \
 "./LEDs.obj" \
 "./MAIN_GAME_APP.obj" \
 "./PORT.obj" \
+"./SWITCH.obj" \
 "./UART5.obj" \
 "./main.obj" \
 "./tm4c123gh6pm_startup_ccs.obj" \
@@ -146,8 +147,8 @@ Simon_Says_Game.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "LEDs.obj" "MAIN_GAME_APP.obj" "PORT.obj" "UART5.obj" "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
-	-$(RM) "LEDs.d" "MAIN_GAME_APP.d" "PORT.d" "UART5.d" "main.d" "tm4c123gh6pm_startup_ccs.d" 
+	-$(RM) "LEDs.obj" "MAIN_GAME_APP.obj" "PORT.obj" "SWITCH.obj" "UART5.obj" "main.obj" "tm4c123gh6pm_startup_ccs.obj" 
+	-$(RM) "LEDs.d" "MAIN_GAME_APP.d" "PORT.d" "SWITCH.d" "UART5.d" "main.d" "tm4c123gh6pm_startup_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

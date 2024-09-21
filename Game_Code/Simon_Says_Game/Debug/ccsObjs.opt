@@ -1,6 +1,7 @@
 "./LEDs.obj"
 "./MAIN_GAME_APP.obj"
 "./PORT.obj"
+"./SWITCH.obj"
 "./UART5.obj"
 "./main.obj"
 "./tm4c123gh6pm_startup_ccs.obj"

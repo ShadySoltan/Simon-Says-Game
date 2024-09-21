@@ -12,7 +12,10 @@
 #include "PORT.h"
 #include "std_types.h"
 
-void Delay(uint32 delay);
+#define NUMBER_OF_ITERATIONS_PER_ONE_MILI_SECOND 364
+
+
+void Delay(unsigned long long n);
 
 void Flash_RedLed(void);
 void Flash_GreenLed(void);
