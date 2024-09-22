@@ -19,18 +19,12 @@
 #include "UART5.h"
 #include "SWITCH.h"
 
-#define CHAR_SET "RGBYPCW"                              //Used Letters for the Sequence
+#define CHAR_SET "RG"                              //Used Letters for the Sequence
 #define CHAR_SET_SIZE (sizeof(CHAR_SET) - 1)            // Exclude the null terminator
 
-#define R        1
-#define G        2
-#define B        3
-#define Y        4
-#define P        5
-#define C        6
-#define W        7
-
 uint8 StringGenerated[6];
+uint8 My_STR[6];
+uint8 My_STR_Index;
 
 void MCU_INIT(void);
 void generateRandomString(uint8 *str, uint8 length);    //Generate The Sequence

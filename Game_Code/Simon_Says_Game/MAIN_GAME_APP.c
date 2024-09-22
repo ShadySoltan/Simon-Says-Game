@@ -47,5 +47,101 @@ void ConvertToUpper(uint8 *str)
 void MAIN_GAME_APP_V1(void)
 {
     //Main game logic for version 1
+
+    //First we need to generate a string
+    uint8 Interrupts = 5;
+    uint8 Length = 5;
+    My_STR_Index = 0;
+
+    srand((unsigned int)time(NULL));
+
+    generateRandomString(StringGenerated, Length);
+
+    //Loop on the generated String and show them on board in terms of RED and GREEN Lights
+    uint8 i = 0;
+    for(i = 0; i < Length; i++)
+    {
+        if(StringGenerated[i] == 'R')
+        {
+            Flash_RedLed();
+        }
+        else if(StringGenerated[i] == 'G')
+        {
+            Flash_GreenLed();
+        }
+        else
+        {
+            //Do nothing
+        }
+    }
+
+    Enable_Exceptions();
+    //After showing the player the sequence of the string now the board will wait for the user to input the sequence again
+
+    //User Input
+    while(Interrupts > 0)
+    {
+        while(FLAG_1 == 0 && FLAG_2 == 0);
+
+        if(FLAG_1 == 1)
+        {
+            My_STR[My_STR_Index] = 'G';
+            My_STR_Index++;
+            FLAG_1 = 0;
+        }
+        else if(FLAG_2 == 1)
+        {
+            My_STR[My_STR_Index] = 'R';
+            My_STR_Index++;
+            FLAG_2 = 0;
+        }
+
+        Delay(50);
+        Interrupts--;
+    }
+
+    //Disable exceptions again after the user made the input for non interrupting the game by mistake at any time
+    Disable_Exceptions();
+
+    My_STR[My_STR_Index] = '\0';
+
+    My_STR_Index = 0;
+    //Compare the two strings if correct flash cyan led 3 times if wrong flash yellow 3 times
+    i = 0;
+    uint8 Error_flag = 0;
+    while(My_STR[i] != '\0' && StringGenerated[i] != '\0')
+    {
+        //Check every index of the sequence
+        if(My_STR[i] != StringGenerated[i])
+        {
+            Error_flag = 1;
+            break;
+        }
+        else
+        {
+            //Do nothing
+        }
+
+        i++;
+    }
+
+    i = 0;
+    if(Error_flag == 0)
+    {
+        for(i = 0; i < 3; i++)
+        {
+            Flash_CyanLed();
+        }
+    }
+    else
+    {
+        for(i = 0; i < 3; i++)
+        {
+            Flash_YellowLed();
+        }
+    }
+    Error_flag = 0;
+    i = 0;
+    Delay(2000);
 }
 

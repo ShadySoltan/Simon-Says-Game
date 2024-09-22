@@ -17,21 +17,21 @@ void Flash_RedLed(void)
     SetBit(GPIO_PORTF_DATA_R,1);
     Delay(1000);
     ClearBit(GPIO_PORTF_DATA_R,1);
-    Delay(1000);
+    Delay(200);
 }
 void Flash_GreenLed(void)
 {
     SetBit(GPIO_PORTF_DATA_R,3);
     Delay(1000);
     ClearBit(GPIO_PORTF_DATA_R,3);
-    Delay(1000);
+    Delay(200);
 }
 void Flash_BlueLed(void)
 {
     SetBit(GPIO_PORTF_DATA_R,2);
     Delay(1000);
     ClearBit(GPIO_PORTF_DATA_R,2);
-    Delay(1000);
+    Delay(200);
 }
 void Flash_PinkLed(void)
 {
@@ -40,25 +40,25 @@ void Flash_PinkLed(void)
     Delay(1000);
     ClearBit(GPIO_PORTF_DATA_R,1);
     ClearBit(GPIO_PORTF_DATA_R,2);
-    Delay(1000);
+    Delay(200);
 }
 void Flash_CyanLed(void)
 {
     SetBit(GPIO_PORTF_DATA_R,3);
     SetBit(GPIO_PORTF_DATA_R,2);
-    Delay(1000);
+    Delay(400);
     ClearBit(GPIO_PORTF_DATA_R,3);
     ClearBit(GPIO_PORTF_DATA_R,2);
-    Delay(1000);
+    Delay(200);
 }
 void Flash_YellowLed(void)
 {
     SetBit(GPIO_PORTF_DATA_R,3);
     SetBit(GPIO_PORTF_DATA_R,1);
-    Delay(1000);
+    Delay(400);
     ClearBit(GPIO_PORTF_DATA_R,3);
     ClearBit(GPIO_PORTF_DATA_R,1);
-    Delay(1000);
+    Delay(200);
 }
 void Flash_WhiteLed(void)
 {
@@ -69,6 +69,6 @@ void Flash_WhiteLed(void)
     ClearBit(GPIO_PORTF_DATA_R,3);
     ClearBit(GPIO_PORTF_DATA_R,2);
     ClearBit(GPIO_PORTF_DATA_R,1);
-    Delay(1000);
+    Delay(200);
 }
 

@@ -104,7 +104,7 @@ void PORTF_INIT(void)
     //Enable NVIC for GPIO_PORTF by enable bit number 31 in Interrupt set enable
     SetBit(NVIC_EN0_R,30);
 
-    Enable_Exceptions();
+    Disable_Exceptions();
     Enable_Faults();
 }
 
