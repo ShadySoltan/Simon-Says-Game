@@ -6,6 +6,13 @@
  */
 #include "MAIN_GAME_APP.h"
 
+// Initialize the MCU
+void MCU_INIT(void)
+{
+    PORTF_INIT(); //Initialize LEDs and Switches on PORTF and allow external interrupt on PF0 and PF4
+    HC05_Init(); //Initialize UART5 peripheral for another version of the game
+}
+
 // Function to generate a random string of a given length
 void generateRandomString(uint8 *str, uint8 length)
 {
@@ -35,5 +42,10 @@ void ConvertToUpper(uint8 *str)
         }
         i++;
     }
+}
+
+void MAIN_GAME_APP_V1(void)
+{
+    //Main game logic for version 1
 }
 

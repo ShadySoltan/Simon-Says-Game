@@ -17,6 +17,7 @@
 #include "PORT.h"
 #include "LEDs.h"
 #include "UART5.h"
+#include "SWITCH.h"
 
 #define CHAR_SET "RGBYPCW"                              //Used Letters for the Sequence
 #define CHAR_SET_SIZE (sizeof(CHAR_SET) - 1)            // Exclude the null terminator
@@ -31,7 +32,9 @@
 
 uint8 StringGenerated[6];
 
+void MCU_INIT(void);
 void generateRandomString(uint8 *str, uint8 length);    //Generate The Sequence
 void ConvertToUpper(uint8 *str);                        //Convert String to UpperCase
+void MAIN_GAME_APP_V1(void);
 
 #endif /* MAIN_GAME_APP_H_ */

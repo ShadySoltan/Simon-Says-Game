@@ -20,6 +20,7 @@ MAIN_GAME_APP.obj: ../tm4c123gh6pm.h
 MAIN_GAME_APP.obj: ../PORT.h
 MAIN_GAME_APP.obj: ../LEDs.h
 MAIN_GAME_APP.obj: ../UART5.h
+MAIN_GAME_APP.obj: ../SWITCH.h
 
 ../MAIN_GAME_APP.c:
 
@@ -60,4 +61,6 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 ../LEDs.h:
 
 ../UART5.h:
+
+../SWITCH.h:
 

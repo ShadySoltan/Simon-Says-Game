@@ -20,6 +20,7 @@ main.obj: ../tm4c123gh6pm.h
 main.obj: ../PORT.h
 main.obj: ../LEDs.h
 main.obj: ../UART5.h
+main.obj: ../SWITCH.h
 
 ../main.c:
 
@@ -60,4 +61,6 @@ C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
 ../LEDs.h:
 
 ../UART5.h:
+
+../SWITCH.h:
 
