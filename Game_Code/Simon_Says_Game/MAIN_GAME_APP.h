@@ -18,6 +18,7 @@
 #include "LEDs.h"
 #include "UART5.h"
 #include "SWITCH.h"
+#include "SYSTICK.h"
 
 #define CHAR_SET "RG"                              //Used Letters for the Sequence
 #define CHAR_SET_SIZE (sizeof(CHAR_SET) - 1)            // Exclude the null terminator

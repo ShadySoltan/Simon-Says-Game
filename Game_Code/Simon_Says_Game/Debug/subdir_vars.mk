@@ -13,6 +13,7 @@ C_SRCS += \
 ../MAIN_GAME_APP.c \
 ../PORT.c \
 ../SWITCH.c \
+../SYSTICK.c \
 ../UART5.c \
 ../main.c \
 ../tm4c123gh6pm_startup_ccs.c 
@@ -22,6 +23,7 @@ C_DEPS += \
 ./MAIN_GAME_APP.d \
 ./PORT.d \
 ./SWITCH.d \
+./SYSTICK.d \
 ./UART5.d \
 ./main.d \
 ./tm4c123gh6pm_startup_ccs.d 
@@ -31,6 +33,7 @@ OBJS += \
 ./MAIN_GAME_APP.obj \
 ./PORT.obj \
 ./SWITCH.obj \
+./SYSTICK.obj \
 ./UART5.obj \
 ./main.obj \
 ./tm4c123gh6pm_startup_ccs.obj 
@@ -40,6 +43,7 @@ OBJS__QUOTED += \
 "MAIN_GAME_APP.obj" \
 "PORT.obj" \
 "SWITCH.obj" \
+"SYSTICK.obj" \
 "UART5.obj" \
 "main.obj" \
 "tm4c123gh6pm_startup_ccs.obj" 
@@ -49,6 +53,7 @@ C_DEPS__QUOTED += \
 "MAIN_GAME_APP.d" \
 "PORT.d" \
 "SWITCH.d" \
+"SYSTICK.d" \
 "UART5.d" \
 "main.d" \
 "tm4c123gh6pm_startup_ccs.d" 
@@ -58,6 +63,7 @@ C_SRCS__QUOTED += \
 "../MAIN_GAME_APP.c" \
 "../PORT.c" \
 "../SWITCH.c" \
+"../SYSTICK.c" \
 "../UART5.c" \
 "../main.c" \
 "../tm4c123gh6pm_startup_ccs.c" 

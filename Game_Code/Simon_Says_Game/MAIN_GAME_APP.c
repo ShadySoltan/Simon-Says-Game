@@ -11,6 +11,7 @@ void MCU_INIT(void)
 {
     PORTF_INIT(); //Initialize LEDs and Switches on PORTF and allow external interrupt on PF0 and PF4
     HC05_Init(); //Initialize UART5 peripheral for another version of the game
+    SysTick_Init();
 }
 
 // Function to generate a random string of a given length
@@ -53,7 +54,7 @@ void MAIN_GAME_APP_V1(void)
     uint8 Length = 5;
     My_STR_Index = 0;
 
-    srand((unsigned int)time(NULL));
+    srand(SysTick_GetCurrent());
 
     generateRandomString(StringGenerated, Length);
 
