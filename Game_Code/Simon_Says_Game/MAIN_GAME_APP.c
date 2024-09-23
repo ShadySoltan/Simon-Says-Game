@@ -136,7 +136,7 @@ void MAIN_GAME_APP_V1(void)
             Flash_CyanLed();
         }
 
-        if(LedsDelay > 600)
+        if(LedsDelay > 300)
         {
             LedsDelay -= 100;
         }
