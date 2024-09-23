@@ -13,7 +13,7 @@
 #include "std_types.h"
 
 #define NUMBER_OF_ITERATIONS_PER_ONE_MILI_SECOND 364
-
+#define LEDS_DELAY                               1500
 
 void Delay(unsigned long long n);
 

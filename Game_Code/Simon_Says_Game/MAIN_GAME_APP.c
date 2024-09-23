@@ -6,6 +6,8 @@
  */
 #include "MAIN_GAME_APP.h"
 
+extern uint32 LedsDelay;
+
 // Initialize the MCU
 void MCU_INIT(void)
 {
@@ -133,12 +135,22 @@ void MAIN_GAME_APP_V1(void)
         {
             Flash_CyanLed();
         }
+
+        if(LedsDelay > 600)
+        {
+            LedsDelay -= 100;
+        }
     }
     else
     {
         for(i = 0; i < 3; i++)
         {
             Flash_YellowLed();
+
+        }
+        if(LedsDelay < 1500)
+        {
+            LedsDelay += 100;
         }
     }
     Error_flag = 0;
