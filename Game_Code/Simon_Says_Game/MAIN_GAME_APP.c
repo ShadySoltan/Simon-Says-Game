@@ -52,7 +52,6 @@ void MAIN_GAME_APP_V1(void)
     //Main game logic for version 1
 
     //First we need to generate a string
-    uint8 Interrupts = 5;
     uint8 Length = 5;
     My_STR_Index = 0;
 
@@ -82,7 +81,7 @@ void MAIN_GAME_APP_V1(void)
     //After showing the player the sequence of the string now the board will wait for the user to input the sequence again
 
     //User Input
-    while(Interrupts > 0)
+    while(Length > 0)
     {
         while(FLAG_1 == 0 && FLAG_2 == 0);
 
@@ -100,7 +99,7 @@ void MAIN_GAME_APP_V1(void)
         }
 
         Delay(50);
-        Interrupts--;
+        Length--;
     }
 
     //Disable exceptions again after the user made the input for non interrupting the game by mistake at any time
@@ -136,9 +135,17 @@ void MAIN_GAME_APP_V1(void)
             Flash_CyanLed();
         }
 
-        if(LedsDelay > 300)
+        if(LedsDelay > 100)
         {
-            LedsDelay -= 100;
+            LedsDelay -= LEDS_DELAY_DECINC_RATE;
+            if(LedsDelay < 100)
+            {
+                LedsDelay = 100;
+            }
+            else
+            {
+                //Do nothing
+            }
         }
     }
     else
@@ -150,9 +157,10 @@ void MAIN_GAME_APP_V1(void)
         }
         if(LedsDelay < 1500)
         {
-            LedsDelay += 100;
+            LedsDelay += LEDS_DELAY_DECINC_RATE;
         }
     }
+
     Error_flag = 0;
     i = 0;
     Delay(2000);

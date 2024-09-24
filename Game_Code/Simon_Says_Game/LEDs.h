@@ -12,8 +12,9 @@
 #include "PORT.h"
 #include "std_types.h"
 
-#define NUMBER_OF_ITERATIONS_PER_ONE_MILI_SECOND 364
-#define LEDS_DELAY                               1500
+#define NUMBER_OF_ITERATIONS_PER_ONE_MILI_SECOND       364
+#define LEDS_DELAY_START                               1500
+#define LEDS_DELAY_DECINC_RATE                         400
 
 void Delay(unsigned long long n);
 
