@@ -138,7 +138,7 @@ void MAIN_GAME_APP_V1(void)
         if(LedsDelay > 100)
         {
             LedsDelay -= LEDS_DELAY_DECINC_RATE;
-            if(LedsDelay < 100)
+            if(LedsDelay < 100 || LedsDelay <= 0 || LedsDelay > 3000)
             {
                 LedsDelay = 100;
             }

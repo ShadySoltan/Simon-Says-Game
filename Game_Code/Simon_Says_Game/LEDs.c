@@ -6,7 +6,7 @@
  */
 #include "LEDs.h"
 
-uint32 LedsDelay = LEDS_DELAY_START;
+uint32 LedsDelay = (uint32)LEDS_DELAY_START;
 
 void Delay(unsigned long long n)
 {
