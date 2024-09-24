@@ -14,7 +14,7 @@
 
 #define NUMBER_OF_ITERATIONS_PER_ONE_MILI_SECOND       364
 #define LEDS_DELAY_START                               1500
-#define LEDS_DELAY_DECINC_RATE                         1000
+#define LEDS_DELAY_DECINC_RATE                         100
 
 void Delay(unsigned long long n);
 

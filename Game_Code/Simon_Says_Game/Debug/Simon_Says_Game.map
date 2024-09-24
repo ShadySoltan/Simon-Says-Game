@@ -1,17 +1,17 @@
 ******************************************************************************
                   TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Tue Sep 24 17:00:43 2024
+>> Linked Tue Sep 24 17:23:23 2024
 
 OUTPUT FILE NAME:   <Simon_Says_Game.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00000bf5
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00000bf1
 
 
 MEMORY CONFIGURATION
 
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
-  FLASH                 00000000   00040000  00000d4c  0003f2b4  R  X
+  FLASH                 00000000   00040000  00000d48  0003f2b8  R  X
   SRAM                  20000000   00008000  00000223  00007ddd  RW X
 
 
@@ -19,10 +19,10 @@ SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    00000d50   00000d50    r-x
+00000000    00000000    00000d48   00000d48    r-x
   00000000    00000000    0000026c   0000026c    r-- .intvecs
-  0000026c    0000026c    00000aa8   00000aa8    r-x .text
-  00000d18    00000d18    00000038   00000038    r-- .cinit
+  0000026c    0000026c    00000aa4   00000aa4    r-x .text
+  00000d10    00000d10    00000038   00000038    r-- .cinit
 20000000    20000000    00000224   00000000    rw-
   20000000    20000000    00000200   00000000    rw- .stack
   20000200    20000200    00000013   00000000    rw- .bss
@@ -37,34 +37,34 @@ section   page    origin      length       input sections
 .intvecs   0    00000000    0000026c     
                   00000000    0000026c     tm4c123gh6pm_startup_ccs.obj (.intvecs)
 
-.text      0    0000026c    00000aa8     
-                  0000026c    000002b4     MAIN_GAME_APP.obj (.text)
-                  00000520    00000224     PORT.obj (.text)
-                  00000744    000001d4     LEDs.obj (.text)
-                  00000918    00000130     UART5.obj (.text)
-                  00000a48    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
-                  00000ae4    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
-                  00000b4c    00000064     SWITCH.obj (.text)
-                  00000bb0    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
-                  00000bf4    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
-                  00000c28    00000034                                   : rand.c.obj (.text:rand)
-                  00000c5c    00000030     SYSTICK.obj (.text)
-                  00000c8c    00000024     rtsv7M4_T_le_v4SPD16_eabi.lib : rand.c.obj (.text:srand)
-                  00000cb0    0000001c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
-                  00000ccc    00000018                                   : ll_mul_t2.asm.obj (.text)
-                  00000ce4    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
-                  00000cf2    0000000c     main.obj (.text)
-                  00000cfe    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
-                  00000d0a    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
-                  00000d0e    00000004                                   : exit.c.obj (.text:abort:abort)
-                  00000d12    00000002                                   : _lock.c.obj (.text:_nop)
+.text      0    0000026c    00000aa4     
+                  0000026c    000002b0     MAIN_GAME_APP.obj (.text)
+                  0000051c    00000224     PORT.obj (.text)
+                  00000740    000001d4     LEDs.obj (.text)
+                  00000914    00000130     UART5.obj (.text)
+                  00000a44    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  00000ae0    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00000b48    00000064     SWITCH.obj (.text)
+                  00000bac    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00000bf0    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00000c24    00000034                                   : rand.c.obj (.text:rand)
+                  00000c58    00000030     SYSTICK.obj (.text)
+                  00000c88    00000024     rtsv7M4_T_le_v4SPD16_eabi.lib : rand.c.obj (.text:srand)
+                  00000cac    0000001c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset:__TI_zero_init_nomemset)
+                  00000cc8    00000018                                   : ll_mul_t2.asm.obj (.text)
+                  00000ce0    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00000cee    0000000c     main.obj (.text)
+                  00000cfa    0000000c     tm4c123gh6pm_startup_ccs.obj (.text)
+                  00000d06    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00000d0a    00000004                                   : exit.c.obj (.text:abort:abort)
+                  00000d0e    00000002                                   : _lock.c.obj (.text:_nop)
 
-.cinit     0    00000d18    00000038     
-                  00000d18    00000013     (.cinit..data.load) [load image, compression = lzss]
-                  00000d2b    00000001     --HOLE-- [fill = 0]
-                  00000d2c    0000000c     (__TI_handler_table)
-                  00000d38    00000008     (.cinit..bss.load) [load image, compression = zero_init]
-                  00000d40    00000010     (__TI_cinit_table)
+.cinit     0    00000d10    00000038     
+                  00000d10    00000013     (.cinit..data.load) [load image, compression = lzss]
+                  00000d23    00000001     --HOLE-- [fill = 0]
+                  00000d24    0000000c     (__TI_handler_table)
+                  00000d30    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00000d38    00000010     (__TI_cinit_table)
 
 .init_array 
 *          0    00000000    00000000     UNINITIALIZED
@@ -93,7 +93,7 @@ MODULE SUMMARY
        Module                         code   ro data   rw data
        ------                         ----   -------   -------
     .\
-       MAIN_GAME_APP.obj              692    0         19     
+       MAIN_GAME_APP.obj              688    0         19     
        tm4c123gh6pm_startup_ccs.obj   12     620       0      
        PORT.obj                       548    0         0      
        LEDs.obj                       468    0         4      
@@ -102,7 +102,7 @@ MODULE SUMMARY
        SYSTICK.obj                    48     0         0      
        main.obj                       12     0         0      
     +--+------------------------------+------+---------+---------+
-       Total:                         2184   620       23     
+       Total:                         2180   620       23     
                                                               
     C:\ti\ccs1260\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
        memcpy_t2.asm.obj              156    0         0      
@@ -122,19 +122,19 @@ MODULE SUMMARY
        Stack:                         0      0         512    
        Linker Generated:              0      55        0      
     +--+------------------------------+------+---------+---------+
-       Grand Total:                   2728   675       547    
+       Grand Total:                   2724   675       547    
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00000d40 records: 2, size/record: 8, table size: 16
-	.data: load addr=00000d18, load size=00000013 bytes, run addr=20000214, run size=00000010 bytes, compression=lzss
-	.bss: load addr=00000d38, load size=00000008 bytes, run addr=20000200, run size=00000013 bytes, compression=zero_init
+__TI_cinit_table @ 00000d38 records: 2, size/record: 8, table size: 16
+	.data: load addr=00000d10, load size=00000013 bytes, run addr=20000214, run size=00000010 bytes, compression=lzss
+	.bss: load addr=00000d30, load size=00000008 bytes, run addr=20000200, run size=00000013 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00000d2c records: 3, size/record: 4, table size: 12
+__TI_handler_table @ 00000d24 records: 3, size/record: 4, table size: 12
 	index: 0, handler: __TI_decompress_lzss
 	index: 1, handler: __TI_decompress_none
 	index: 2, handler: __TI_zero_init
@@ -144,73 +144,73 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 
 address   name                          
 -------   ----                          
-00000d0f  C$$EXIT                       
+00000d0b  C$$EXIT                       
 000002d5  ConvertToUpper                
-00000745  Delay                         
+00000741  Delay                         
 20000210  FLAG_1                        
 20000211  FLAG_2                        
-000007d9  Flash_BlueLed                 
-00000841  Flash_CyanLed                 
-000007af  Flash_GreenLed                
-00000803  Flash_PinkLed                 
-00000785  Flash_RedLed                  
-000008bd  Flash_WhiteLed                
-0000087f  Flash_YellowLed               
-00000b4d  GPIOPortF_Handler             
-00000919  HC05_Init                     
+000007d5  Flash_BlueLed                 
+0000083d  Flash_CyanLed                 
+000007ab  Flash_GreenLed                
+000007ff  Flash_PinkLed                 
+00000781  Flash_RedLed                  
+000008b9  Flash_WhiteLed                
+0000087b  Flash_YellowLed               
+00000b49  GPIOPortF_Handler             
+00000915  HC05_Init                     
 2000021c  LedsDelay                     
 00000315  MAIN_GAME_APP_V1              
 0000026d  MCU_INIT                      
 20000200  My_STR                        
 20000212  My_STR_Index                  
-00000521  PORTF_INIT                    
-00000cff  ResetISR                      
+0000051d  PORTF_INIT                    
+00000cfb  ResetISR                      
 20000208  StringGenerated               
-00000c79  SysTick_GetCurrent            
-00000c5d  SysTick_Init                  
-000009a3  UART5_ReceiveByte             
-000009b3  UART5_ReceiveString           
-0000097f  UART5_SendByte                
-000009eb  UART5_SendString              
+00000c75  SysTick_GetCurrent            
+00000c59  SysTick_Init                  
+0000099f  UART5_ReceiveByte             
+000009af  UART5_ReceiveString           
+0000097b  UART5_SendByte                
+000009e7  UART5_SendString              
 20000200  __STACK_END                   
 00000200  __STACK_SIZE                  
 20000200  __STACK_TOP                   
-00000d40  __TI_CINIT_Base               
-00000d50  __TI_CINIT_Limit              
-00000d2c  __TI_Handler_Table_Base       
-00000d38  __TI_Handler_Table_Limit      
-00000bb1  __TI_auto_init_nobinit_nopinit
-00000ae5  __TI_decompress_lzss          
-00000ce5  __TI_decompress_none          
+00000d38  __TI_CINIT_Base               
+00000d48  __TI_CINIT_Limit              
+00000d24  __TI_Handler_Table_Base       
+00000d30  __TI_Handler_Table_Limit      
+00000bad  __TI_auto_init_nobinit_nopinit
+00000ae1  __TI_decompress_lzss          
+00000ce1  __TI_decompress_none          
 ffffffff  __TI_pprof_out_hndl           
 ffffffff  __TI_prof_data_size           
 ffffffff  __TI_prof_data_start          
 00000000  __TI_static_base__            
-00000cb1  __TI_zero_init_nomemset       
-00000ccd  __aeabi_lmul                  
-00000a49  __aeabi_memcpy                
-00000a49  __aeabi_memcpy4               
-00000a49  __aeabi_memcpy8               
+00000cad  __TI_zero_init_nomemset       
+00000cc9  __aeabi_lmul                  
+00000a45  __aeabi_memcpy                
+00000a45  __aeabi_memcpy4               
+00000a45  __aeabi_memcpy8               
 ffffffff  __binit__                     
 ffffffff  __c_args__                    
 UNDEFED   __mpu_init                    
 20000000  __stack                       
 20000000  __start___llvm_prf_cnts       
 20000000  __stop___llvm_prf_cnts        
-00000bf5  _c_int00_noargs               
+00000bf1  _c_int00_noargs               
 20000214  _lock                         
-00000d13  _nop                          
+00000d0f  _nop                          
 UNDEFED   _system_post_cinit            
-00000d0b  _system_pre_init              
+00000d07  _system_pre_init              
 20000218  _unlock                       
-00000d0f  abort                         
+00000d0b  abort                         
 ffffffff  binit                         
 00000000  g_pfnVectors                  
 0000027d  generateRandomString          
-00000cf3  main                          
-00000a49  memcpy                        
-00000c29  rand                          
-00000c8d  srand                         
+00000cef  main                          
+00000a45  memcpy                        
+00000c25  rand                          
+00000c89  srand                         
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -224,45 +224,45 @@ address   name
 0000027d  generateRandomString          
 000002d5  ConvertToUpper                
 00000315  MAIN_GAME_APP_V1              
-00000521  PORTF_INIT                    
-00000745  Delay                         
-00000785  Flash_RedLed                  
-000007af  Flash_GreenLed                
-000007d9  Flash_BlueLed                 
-00000803  Flash_PinkLed                 
-00000841  Flash_CyanLed                 
-0000087f  Flash_YellowLed               
-000008bd  Flash_WhiteLed                
-00000919  HC05_Init                     
-0000097f  UART5_SendByte                
-000009a3  UART5_ReceiveByte             
-000009b3  UART5_ReceiveString           
-000009eb  UART5_SendString              
-00000a49  __aeabi_memcpy                
-00000a49  __aeabi_memcpy4               
-00000a49  __aeabi_memcpy8               
-00000a49  memcpy                        
-00000ae5  __TI_decompress_lzss          
-00000b4d  GPIOPortF_Handler             
-00000bb1  __TI_auto_init_nobinit_nopinit
-00000bf5  _c_int00_noargs               
-00000c29  rand                          
-00000c5d  SysTick_Init                  
-00000c79  SysTick_GetCurrent            
-00000c8d  srand                         
-00000cb1  __TI_zero_init_nomemset       
-00000ccd  __aeabi_lmul                  
-00000ce5  __TI_decompress_none          
-00000cf3  main                          
-00000cff  ResetISR                      
-00000d0b  _system_pre_init              
-00000d0f  C$$EXIT                       
-00000d0f  abort                         
-00000d13  _nop                          
-00000d2c  __TI_Handler_Table_Base       
-00000d38  __TI_Handler_Table_Limit      
-00000d40  __TI_CINIT_Base               
-00000d50  __TI_CINIT_Limit              
+0000051d  PORTF_INIT                    
+00000741  Delay                         
+00000781  Flash_RedLed                  
+000007ab  Flash_GreenLed                
+000007d5  Flash_BlueLed                 
+000007ff  Flash_PinkLed                 
+0000083d  Flash_CyanLed                 
+0000087b  Flash_YellowLed               
+000008b9  Flash_WhiteLed                
+00000915  HC05_Init                     
+0000097b  UART5_SendByte                
+0000099f  UART5_ReceiveByte             
+000009af  UART5_ReceiveString           
+000009e7  UART5_SendString              
+00000a45  __aeabi_memcpy                
+00000a45  __aeabi_memcpy4               
+00000a45  __aeabi_memcpy8               
+00000a45  memcpy                        
+00000ae1  __TI_decompress_lzss          
+00000b49  GPIOPortF_Handler             
+00000bad  __TI_auto_init_nobinit_nopinit
+00000bf1  _c_int00_noargs               
+00000c25  rand                          
+00000c59  SysTick_Init                  
+00000c75  SysTick_GetCurrent            
+00000c89  srand                         
+00000cad  __TI_zero_init_nomemset       
+00000cc9  __aeabi_lmul                  
+00000ce1  __TI_decompress_none          
+00000cef  main                          
+00000cfb  ResetISR                      
+00000d07  _system_pre_init              
+00000d0b  C$$EXIT                       
+00000d0b  abort                         
+00000d0f  _nop                          
+00000d24  __TI_Handler_Table_Base       
+00000d30  __TI_Handler_Table_Limit      
+00000d38  __TI_CINIT_Base               
+00000d48  __TI_CINIT_Limit              
 20000000  __stack                       
 20000000  __start___llvm_prf_cnts       
 20000000  __stop___llvm_prf_cnts        
